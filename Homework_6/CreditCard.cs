@@ -1,28 +1,24 @@
 ﻿//----------------------------Task 2-------------------------------
 public class CreditCard
 {
-    private uint AccountNumber {get;set;}
-    private decimal AmountAccount {get;set;} = 0;
+    private uint _accountName;
+    private decimal _amountAccount;
 
-    public void AddAmount()
+    public void AddAmount(decimal add)
     {
-        Console.Write("Please, choose Amount which will be added on your Account: $");
-        decimal add = decimal.Parse(Console.ReadLine());
-        AmountAccount += add;
+        _amountAccount += add;
     }
-    public void RemoveAmount()
+    public void RemoveAmount(decimal remove)
     {
-        Console.Write("Please, choose Amount which will be removed from your Account: $");
-        decimal remove = decimal.Parse(Console.ReadLine());
-        AmountAccount -= remove;
+        _amountAccount -= remove;
     }
     public void PrintAccount()
     {
-        Console.WriteLine($"Account number: {AccountNumber}\nAmount on your account: ${AmountAccount}\n");
+        Console.WriteLine($"Account number: {_accountName}\nAmount on your account: ${_amountAccount}\n");
     }
     public CreditCard(uint accnum,decimal amnt)
     {
-        AccountNumber = accnum;
-        AmountAccount = amnt;
+        _accountName = accnum;
+        _amountAccount = amnt;
     }
 }

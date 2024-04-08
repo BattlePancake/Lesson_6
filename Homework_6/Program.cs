@@ -1,32 +1,29 @@
 ﻿//----------------------------Task 1-------------------------------
-// Phone phone1 = new Phone("IPhone 11 Pro","291112233",188)
-// {
+Phone phone1 = new Phone("IPhone 11 Pro","291112233",188)
+{
+};
+Phone phone2 = new Phone("IPhone 15 Pro Max","332223344",221)
+{
+};
+Phone phone3 = new Phone("Google Pixel 8 Pro","445556677",187)
+{
+};
 
-// };
-// Phone phone2 = new Phone("IPhone 15 Pro Max","332223344",221)
-// {
+phone1.Print();
+phone2.Print();
+phone3.Print();
 
-// };
-// Phone phone3 = new Phone("Google Pixel 8 Pro","445556677",187)
-// {
+phone1.ReceiveCall("Luke");
+phone1.GetNumber("291234455");
+phone2.ReceiveCall("Kate");
+phone2.GetNumber("295551234");
+phone3.ReceiveCall("James");
+phone3.GetNumber("297774321");
 
-// };
+phone2.ReceiveCall("Jack","440001122");
 
-// phone1.Print();
-// phone2.Print();
-// phone3.Print();
-
-// phone1.ReceiveCall("Luke");
-// phone1.GetNumber("291234455");
-// phone2.ReceiveCall("Kate");
-// phone2.GetNumber("295551234");
-// phone3.ReceiveCall("James");
-// phone3.GetNumber("297774321");
-
-// phone2.ReceiveCall("Jack","440001122");
-
-// string[] phnums = {"291112233","332223344","443334455"};
-// phone3.SendMessage(phnums);
+string[] phnums = {"291112233","332223344","443334455"};
+phone3.SendMessage(phnums);
 
 
 //----------------------------Task 2-------------------------------
@@ -38,9 +35,9 @@
 // account2.PrintAccount();
 // account3.PrintAccount();
 
-// account1.AddAmount();
-// account2.AddAmount();
-// account3.RemoveAmount();
+// account1.AddAmount(500);
+// account2.AddAmount(310);
+// account3.RemoveAmount(50000);
 
 // account1.PrintAccount();
 // account2.PrintAccount();

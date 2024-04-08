@@ -3,13 +3,26 @@ using System.Text;
 
 public class Phone
 {
-    public string Number;
-    public string Model;
-    private int Weight;
+    private string _number;
+    private string _model;
+    private int _weight;
+
+    public Phone()
+    {
+    }
+    public Phone(string mod, string num)
+    {
+        _model = mod;
+        _number = num;
+    }
+    public Phone(string mod, string num, int wgt): this(mod,num)
+    {
+        _weight = wgt;
+    }
 
     public void Print()
     {
-        Console.WriteLine($"Model: {Model}, Number: {Number}, Weigth: {Weight}");
+        Console.WriteLine($"Model: {_model}, Number: {_number}, Weigth: {_weight}");
     }
     public void ReceiveCall(string name)
     {
@@ -30,18 +43,5 @@ public class Phone
         {
             Console.Write($"{a}  ");
         }
-    }
-
-    public Phone()
-    {
-    }
-    public Phone(string mod, string num)
-    {
-        Model = mod;
-        Number = num;
-    }
-    public Phone(string mod, string num, int wgt): this(mod,num)
-    {
-        Weight = wgt;
     }
 }
